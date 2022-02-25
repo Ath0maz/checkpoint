@@ -1,32 +1,23 @@
-const opcoes = {
-    1: { nome: 'Pipoca', tempo: 10 },
-    2: { nome: 'Macarrão', tempo: 8 },
-    3: { nome: 'Carne', tempo: 15 },
-    4: { nome: 'Feijão', tempo: 12 },
-    5: { nome: 'Brigadeiro', tempo: 8 },
-};
+let pipoca = "10 segundos"
 
-function Menu(numeroPrato, tempo) {
-    const prato = opcoes[numeroPrato];
-
-    if (!prato) {
-        return console.log('Prato inexistente');
+function Menu(pipoca) {
+    if(!pipoca){
+        console.log("Prato Inexistente")
     }
 
     let mensagem;
-    const tempoPadrao = prato.tempo;
 
-    if (tempo < tempoPadrao) {
-        mensagem = 'Tempo insuficiente';
-    } else if (tempo > tempoPadrao * 2 && tempo <= tempoPadrao * 3) {
-        mensagem = 'A comida queimou';
-    } else if (tempo > tempoPadrao * 3) {
-        mensagem = 'Kabummm';
+    if(pipoca < 10){
+        mensagem = console.log("Tempo Insuficiente")
+    } else if(pipoca > 10 * 2 && pipoca <= 10 * 3){
+        mensagem = console.log("A comida queimou")
+    } else if(pipoca > 10 * 3){
+        mensagem = console.log("KABUMMMM!")
     } else {
-        mensagem = 'Prato pronto, bom apeite!!!';
+        mensagem = console.log("Prato pronto, bom apetite!")
     }
 
-    return console.log(mensagem);
+    console.log(mensagem)
 }
 
-Menu(3, 20)
+Menu(pipoca,100)
