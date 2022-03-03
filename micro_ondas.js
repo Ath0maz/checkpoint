@@ -41,7 +41,7 @@ function Menu(numeroPrato, tempo) {
             let time = (1000 * i);
             setTimeout(() => {
                 i++;
-                console.log(i);
+                // console.log(i);
                 if (i == tempoContador) {
                     console.log('A comida queimou');
                 };
@@ -61,4 +61,4 @@ function Menu(numeroPrato, tempo) {
     }
 }
 
-Menu(2, 15)
+Menu(1, 50)
